@@ -36,38 +36,38 @@ namespace winrt::MazeGen::implementation
             _navigation = value;
         }
 
-        ::winrt::Windows::UI::Xaml::Controls::ComboBox WidthInput()
+        ::winrt::Windows::UI::Xaml::Controls::ComboBox ColumnsInput()
         {
-            return _WidthInput;
+            return _ColumnsInput;
         }
-        void WidthInput(::winrt::Windows::UI::Xaml::Controls::ComboBox value)
+        void ColumnsInput(::winrt::Windows::UI::Xaml::Controls::ComboBox value)
         {
-            _WidthInput = value;
-        }
-
-        ::winrt::Windows::UI::Xaml::Controls::ComboBox HeightInput()
-        {
-            return _HeightInput;
-        }
-        void HeightInput(::winrt::Windows::UI::Xaml::Controls::ComboBox value)
-        {
-            _HeightInput = value;
+            _ColumnsInput = value;
         }
 
-        ::winrt::Microsoft::UI::Xaml::Controls::NumberBox PathWidthInput()
+        ::winrt::Windows::UI::Xaml::Controls::ComboBox RowsInput()
+        {
+            return _RowsInput;
+        }
+        void RowsInput(::winrt::Windows::UI::Xaml::Controls::ComboBox value)
+        {
+            _RowsInput = value;
+        }
+
+        ::winrt::Windows::UI::Xaml::Controls::TextBox PathWidthInput()
         {
             return _PathWidthInput;
         }
-        void PathWidthInput(::winrt::Microsoft::UI::Xaml::Controls::NumberBox value)
+        void PathWidthInput(::winrt::Windows::UI::Xaml::Controls::TextBox value)
         {
             _PathWidthInput = value;
         }
 
-        ::winrt::Microsoft::UI::Xaml::Controls::NumberBox WallWidthInput()
+        ::winrt::Windows::UI::Xaml::Controls::TextBox WallWidthInput()
         {
             return _WallWidthInput;
         }
-        void WallWidthInput(::winrt::Microsoft::UI::Xaml::Controls::NumberBox value)
+        void WallWidthInput(::winrt::Windows::UI::Xaml::Controls::TextBox value)
         {
             _WallWidthInput = value;
         }
@@ -97,10 +97,10 @@ namespace winrt::MazeGen::implementation
         struct MainPage_obj1_Bindings;
 
         ::winrt::Microsoft::UI::Xaml::Controls::NavigationView _navigation{nullptr};
-        ::winrt::Windows::UI::Xaml::Controls::ComboBox _WidthInput{nullptr};
-        ::winrt::Windows::UI::Xaml::Controls::ComboBox _HeightInput{nullptr};
-        ::winrt::Microsoft::UI::Xaml::Controls::NumberBox _PathWidthInput{nullptr};
-        ::winrt::Microsoft::UI::Xaml::Controls::NumberBox _WallWidthInput{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::ComboBox _ColumnsInput{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::ComboBox _RowsInput{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::TextBox _PathWidthInput{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::TextBox _WallWidthInput{nullptr};
         ::winrt::Windows::UI::Xaml::Controls::Button _GenerateButton{nullptr};
         ::winrt::Windows::UI::Xaml::Controls::TextBlock _LogText{nullptr};
     };

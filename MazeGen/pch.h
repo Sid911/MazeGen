@@ -3,6 +3,8 @@
 #include <unknwn.h>
 #include <restrictederrorinfo.h>
 #include <string>
+#include <algorithm>
+#include <random>
 #include <hstring.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>

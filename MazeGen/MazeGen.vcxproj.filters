@@ -15,12 +15,12 @@
     <ClCompile Include="App.cpp" />
     <ClCompile Include="MainPage.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="DesktoNotificationManagerCompat.cpp" />
+    <ClCompile Include="DesktopNotificationManagerCompat.cpp" />
     <ClCompile Include="Maze.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="DesktoNotificationManagerCompat.h" />
+    <ClInclude Include="DesktopNotificationManagerCompat.h" />
     <ClInclude Include="Maze.h" />
   </ItemGroup>
   <ItemGroup>

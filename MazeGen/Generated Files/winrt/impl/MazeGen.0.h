@@ -21,22 +21,22 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::MazeGen::MainPage> = L"MazeGen.MainPage";
     template <> inline constexpr auto& name_v<winrt::MazeGen::XamlMetaDataProvider> = L"MazeGen.XamlMetaDataProvider";
     template <> inline constexpr auto& name_v<winrt::MazeGen::IMainPage> = L"MazeGen.IMainPage";
-    template <> inline constexpr guid guid_v<winrt::MazeGen::IMainPage>{ 0xD4C53E67,0xF1A0,0x51AE,{ 0x90,0xC7,0x0D,0x21,0x76,0x23,0x59,0xF7 } }; // D4C53E67-F1A0-51AE-90C7-0D21762359F7
+    template <> inline constexpr guid guid_v<winrt::MazeGen::IMainPage>{ 0xCDBB52FF,0xDA2D,0x593A,{ 0xB2,0x38,0x55,0xAD,0x10,0x15,0x5E,0xAD } }; // CDBB52FF-DA2D-593A-B238-55AD10155EAD
     template <> struct default_interface<winrt::MazeGen::MainPage>{ using type = winrt::MazeGen::IMainPage; };
     template <> struct default_interface<winrt::MazeGen::XamlMetaDataProvider>{ using type = winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider; };
     template <> struct abi<winrt::MazeGen::IMainPage>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall get_MyProperty(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall put_MyProperty(int32_t) noexcept = 0;
+            virtual int32_t __stdcall get_PathWidth(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_PathWidth(int32_t) noexcept = 0;
         };
     };
     template <typename D>
     struct consume_MazeGen_IMainPage
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) MyProperty() const;
-        WINRT_IMPL_AUTO(void) MyProperty(int32_t value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) PathWidth() const;
+        WINRT_IMPL_AUTO(void) PathWidth(int32_t value) const;
     };
     template <> struct consume<winrt::MazeGen::IMainPage>
     {

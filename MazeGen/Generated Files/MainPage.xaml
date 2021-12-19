@@ -12,7 +12,7 @@
         <AcrylicBrush BackgroundSource="HostBackdrop" TintOpacity="0.7" TintColor="Black" FallbackColor="Black"/>
     </Page.Background>
 
-    <muxc:NavigationView x:Name="navigation" PaneDisplayMode="LeftCompact" OpenPaneLength="200" IsPaneOpen="False" >
+    <muxc:NavigationView x:ConnectionId='2' x:Name="navigation" PaneDisplayMode="LeftCompact" OpenPaneLength="200" IsPaneOpen="False" >
         <muxc:NavigationView.Background>
             <AcrylicBrush TintColor="#CC000000" BackgroundSource="HostBackdrop"/>
         </muxc:NavigationView.Background>
@@ -39,10 +39,10 @@
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Logs : " FontWeight="Bold" FontSize="16" FontFamily="Airal" Grid.Column="0" IsTextSelectionEnabled="False"/>
-                    <Button Content="Clear logs"  Grid.Column="1" HorizontalAlignment="Right" Click="ClearLogs"/>
+                    <Button x:ConnectionId='9' Content="Clear logs"  Grid.Column="1" HorizontalAlignment="Right"                  />
                 </Grid>
                 <muxc:ScrollView VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Visible" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible">
-                    <TextBlock Name="LogText" Text="" Margin="20,0,20,20" FontFamily="Consolas" FontWeight="Light" FontSize="11" IsColorFontEnabled="True" IsTextSelectionEnabled="True" />
+                    <TextBlock x:ConnectionId='8' Name="LogText" Text="" Margin="20,0,20,20" FontFamily="Consolas" FontWeight="Light" FontSize="11" IsColorFontEnabled="True" IsTextSelectionEnabled="True" />
                 </muxc:ScrollView>
             </StackPanel>
             <StackPanel Grid.Column="1" Padding="10">
@@ -65,7 +65,7 @@
                 </CommandBar>
                 <muxc:InfoBar IsOpen="True" Severity="Informational" Title="Remember:" 
                               Message="Saving from this dialog will save the maze/solution in pixel perfect resolution so that it can be imported later. Save it in navigation bar for more options." />
-                <ComboBox IsEditable="True" x:Name="ColumnsInput" Margin="0,10,0,10" Header="Columns" HorizontalAlignment="Stretch" PlaceholderText="Pick a size" BorderThickness="0,0,0,0" SelectedIndex="6" >
+                <ComboBox x:ConnectionId='3' IsEditable="True" x:Name="ColumnsInput" Margin="0,10,0,10" Header="Columns" HorizontalAlignment="Stretch" PlaceholderText="Pick a size" BorderThickness="0,0,0,0" SelectedIndex="6" >
                     <x:Int32>8</x:Int32>
                     <x:Int32>16</x:Int32>
                     <x:Int32>24</x:Int32>
@@ -76,7 +76,7 @@
                     <x:Int32>64</x:Int32>
                     <x:Int32>128</x:Int32>
                 </ComboBox>
-                <ComboBox IsEditable="True" x:Name="RowsInput" Margin="0,10,0,10" Header="Rows" HorizontalAlignment="Stretch" PlaceholderText="Pick a size" BorderThickness="0,0,0,0" SelectedIndex="6">
+                <ComboBox x:ConnectionId='4' IsEditable="True" x:Name="RowsInput" Margin="0,10,0,10" Header="Rows" HorizontalAlignment="Stretch" PlaceholderText="Pick a size" BorderThickness="0,0,0,0" SelectedIndex="6">
                     <x:Int32>8</x:Int32>
                     <x:Int32>16</x:Int32>
                     <x:Int32>24</x:Int32>
@@ -87,9 +87,9 @@
                     <x:Int32>64</x:Int32>
                     <x:Int32>128</x:Int32>
                 </ComboBox>
-                <TextBox PlaceholderText="Path width (pixels)" Name="PathWidthInput" Margin="0,10,0,10" BeforeTextChanging="NoText"/>
-                <TextBox PlaceholderText="Wall width (pixels)" Name="WallWidthInput" Margin="0,10,0,10" BeforeTextChanging="NoText"/>
-                <Button Content="Generate Maze" Name="GenerateButton" Click="GenerateMaze" >
+                <TextBox x:ConnectionId='5' PlaceholderText="Path width (pixels)" Name="PathWidthInput" Margin="0,10,0,10"                            />
+                <TextBox x:ConnectionId='6' PlaceholderText="Wall width (pixels)" Name="WallWidthInput" Margin="0,10,0,10"                            />
+                <Button x:ConnectionId='7' Content="Generate Maze" Name="GenerateButton"                      >
                     <Button.Background>
                         <AcrylicBrush TintColor="#CC0A0A0A"/>
                     </Button.Background>
@@ -98,3 +98,4 @@
         </Grid>
     </muxc:NavigationView>
 </Page>
+

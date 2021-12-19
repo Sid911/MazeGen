@@ -1,5 +1,5 @@
 ﻿#include "pch.h"
-#include "DesktoNotificationManagerCompat.h"
+#include "DesktopNotificationManagerCompat.h"
 
 // ******************************************************************
 // Copyright (c) Microsoft. All rights reserved.

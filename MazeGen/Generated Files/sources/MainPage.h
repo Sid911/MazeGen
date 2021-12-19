@@ -26,8 +26,8 @@ namespace winrt::MazeGen::implementation
     {
         MainPage() = default;
 
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
+        int32_t PathWidth();
+        void PathWidth(int32_t value);
     };
 }
 namespace winrt::MazeGen::factory_implementation

@@ -117,7 +117,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DesktoNotificationManagerCompat.h" />
+    <ClInclude Include="DesktopNotificationManagerCompat.h" />
     <ClInclude Include="Maze.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.h">
@@ -150,7 +150,7 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DesktoNotificationManagerCompat.cpp" />
+    <ClCompile Include="DesktopNotificationManagerCompat.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

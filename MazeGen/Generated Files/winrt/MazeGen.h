@@ -13,30 +13,30 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.211028.7"), "Mismatche
 #include "winrt/impl/MazeGen.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_MazeGen_IMainPage<D>::MyProperty() const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_MazeGen_IMainPage<D>::PathWidth() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::MazeGen::IMainPage)->get_MyProperty(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::MazeGen::IMainPage)->get_PathWidth(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_MazeGen_IMainPage<D>::MyProperty(int32_t value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_MazeGen_IMainPage<D>::PathWidth(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::MazeGen::IMainPage)->put_MyProperty(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::MazeGen::IMainPage)->put_PathWidth(value));
     }
     template <typename D>
     struct produce<D, winrt::MazeGen::IMainPage> : produce_base<D, winrt::MazeGen::IMainPage>
     {
-        int32_t __stdcall get_MyProperty(int32_t* value) noexcept final try
+        int32_t __stdcall get_PathWidth(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<int32_t>(this->shim().MyProperty());
+            *value = detach_from<int32_t>(this->shim().PathWidth());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_MyProperty(int32_t value) noexcept final try
+        int32_t __stdcall put_PathWidth(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().MyProperty(value);
+            this->shim().PathWidth(value);
             return 0;
         }
         catch (...) { return to_hresult(); }

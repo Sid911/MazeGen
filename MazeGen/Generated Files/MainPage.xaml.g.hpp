@@ -46,25 +46,39 @@ namespace winrt::MazeGen::implementation
         case 3:
             {
                 auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::ComboBox>();
-                this->WidthInput(targetElement);
+                this->ColumnsInput(targetElement);
             }
             break;
         case 4:
             {
                 auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::ComboBox>();
-                this->HeightInput(targetElement);
+                this->RowsInput(targetElement);
             }
             break;
         case 5:
             {
-                auto targetElement = target.as<::winrt::Microsoft::UI::Xaml::Controls::NumberBox>();
+                auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::TextBox>();
                 this->PathWidthInput(targetElement);
+                auto weakThis = ::winrt::make_weak<class_type>(*this);
+                targetElement.BeforeTextChanging([weakThis](::winrt::Windows::UI::Xaml::Controls::TextBox const& p0, ::winrt::Windows::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs const& p1){
+                    if (auto t = weakThis.get())
+                    {
+                        ::winrt::get_self<D>(t)->NoText(p0, p1);
+                    }
+                });
             }
             break;
         case 6:
             {
-                auto targetElement = target.as<::winrt::Microsoft::UI::Xaml::Controls::NumberBox>();
+                auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::TextBox>();
                 this->WallWidthInput(targetElement);
+                auto weakThis = ::winrt::make_weak<class_type>(*this);
+                targetElement.BeforeTextChanging([weakThis](::winrt::Windows::UI::Xaml::Controls::TextBox const& p0, ::winrt::Windows::UI::Xaml::Controls::TextBoxBeforeTextChangingEventArgs const& p1){
+                    if (auto t = weakThis.get())
+                    {
+                        ::winrt::get_self<D>(t)->NoText(p0, p1);
+                    }
+                });
             }
             break;
         case 7:
