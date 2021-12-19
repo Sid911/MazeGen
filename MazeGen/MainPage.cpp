@@ -47,6 +47,8 @@ namespace winrt::MazeGen::implementation
 
 		Maze maze = Maze(mazeHeight, mazeWidth, mazePathWidth, mazeWallWidth);
 		std::wstring outputFile = maze.generateMaze();
+		Media::Imaging::BitmapImage bitmapImage = Media::Imaging::BitmapImage(winrt::Windows::Foundation::Uri(outputFile));
+		MazeImage().Source(bitmapImage);
 		UpdateLog(L"File generated at : " + outputFile + L"\n");
 	}
 

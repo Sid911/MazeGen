@@ -89,6 +89,15 @@ namespace winrt::MazeGen::implementation
         {
             _LogText = value;
         }
+
+        ::winrt::Windows::UI::Xaml::Controls::Image MazeImage()
+        {
+            return _MazeImage;
+        }
+        void MazeImage(::winrt::Windows::UI::Xaml::Controls::Image value)
+        {
+            _MazeImage = value;
+        }
         
     protected:
         bool _contentLoaded{false};
@@ -103,6 +112,7 @@ namespace winrt::MazeGen::implementation
         ::winrt::Windows::UI::Xaml::Controls::TextBox _WallWidthInput{nullptr};
         ::winrt::Windows::UI::Xaml::Controls::Button _GenerateButton{nullptr};
         ::winrt::Windows::UI::Xaml::Controls::TextBlock _LogText{nullptr};
+        ::winrt::Windows::UI::Xaml::Controls::Image _MazeImage{nullptr};
     };
 }
 

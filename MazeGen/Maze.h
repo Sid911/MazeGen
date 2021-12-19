@@ -21,8 +21,10 @@ class Maze
 private:
 	INT32 m_mazeHeight, m_mazeWidth;
 	double m_pathWidth, m_wallWidth;
+
 	std::vector < std::vector<INT8>> mazeGrid;
 	std::stack<std::pair<INT32, INT32>> m_stack;
+	std::wstring m_filePath;
 	INT32 m_visited;
 
 
@@ -39,8 +41,9 @@ public:
 		return mazeGrid;
 	}
 	std::wstring generateMaze();
+	void writeImage(cv::Mat& image);
 
 	void _recursiveBacktracker(INT32 startIndex, cv::Mat &image);
-	cv::Point _gridToScreenSpace(double x, double y);
+	cv::Point _gridToScreenSpace(double x, double y, double OffsetX = 0, double OffsetY = 0);
 };
 

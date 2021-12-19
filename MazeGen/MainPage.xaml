@@ -30,7 +30,10 @@
             <StackPanel Grid.Column="0">
                 <muxc:ProgressBar IsIndeterminate="True" MinWidth="400"  MaxWidth="1000" ShowPaused="False" ShowError="False" Visibility="Collapsed"/>
                 <Canvas MinWidth="400" MaxWidth="1000" MinHeight="400" Grid.Column="0" Background="#33000000">
-                    <Rectangle Width="10" Height="10" Fill="Black" Canvas.Left="10"/>
+                    <ItemsWrapGrid>
+                        <Image Name="MazeImage" Stretch="Uniform" MaxWidth="900" MinWidth="400" HorizontalAlignment="Center" Margin="10" CacheMode="BitmapCache" CanBeScrollAnchor="True"/>
+                        
+                    </ItemsWrapGrid>
 
                 </Canvas>
                 <Grid Padding="30,10,30,10">

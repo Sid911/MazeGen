@@ -112,6 +112,12 @@ namespace winrt::MazeGen::implementation
                 });
             }
             break;
+        case 10:
+            {
+                auto targetElement = target.as<::winrt::Windows::UI::Xaml::Controls::Image>();
+                this->MazeImage(targetElement);
+            }
+            break;
         }
         _contentLoaded = true;
     }
