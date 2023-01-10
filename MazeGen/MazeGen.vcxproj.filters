@@ -60,15 +60,15 @@
   <ItemGroup>
     <None Include="PropertySheet.props" />
     <None Include="packages.config" />
+    <None Include="include\bin\opencv_world454d.dll">
+      <Filter>dll</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="include\dll\opencv_world454.dll">
-      <Filter>dll</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="include\dll\opencv_world454d.dll">
+    <CopyFileToFolders Include="include\bin\opencv_world454.dll">
       <Filter>dll</Filter>
     </CopyFileToFolders>
   </ItemGroup>
